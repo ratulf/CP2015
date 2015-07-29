@@ -43,33 +43,14 @@ class Task {
                     }
                 }
             }
-            if (!ok) {
-                out.println(i - 1);
+            if (i == n || !ok) {
+                int l = ok ? n : i - 1;
+                out.println(l);
                 for (int j = 0; j <= k; j++) {
-                    if (state[i - 1][j]) {
+                    if (state[l][j]) {
                         StringBuilder path = new StringBuilder();
                         int val = j;
-                        for (int z = i - 1; z > 0; z--) {
-                            if (trace[z][val]) {
-                                path.append("+");
-                                val -= a[z - 1];
-                            } else {
-                                path.append("-");
-                                val += a[z - 1];
-                            }
-                        }
-                        out.println(path.reverse().toString());
-                        return;
-                    }
-                }
-            }
-            if (i == n) {
-                out.println(n);
-                for (int j = 0; j <= k; j++) {
-                    if (state[i][j]) {
-                        StringBuilder path = new StringBuilder();
-                        int val = j;
-                        for (int z = i; z > 0; z--) {
+                        for (int z = l; z > 0; z--) {
                             if (trace[z][val]) {
                                 path.append("+");
                                 val -= a[z - 1];
