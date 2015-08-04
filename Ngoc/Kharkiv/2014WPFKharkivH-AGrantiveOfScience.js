@@ -1,10 +1,10 @@
 
 function genTest2014WPFKharkivH_3() {
-    var N = 200;
-    var M = 200;
+    var N = 30;
+    var M = 10;
     var s = N + ' ' + M + '\n';
     for (i = 0; i < N; i++) {
-        var Ni = randBetween(100, 500);
+        var Ni = randBetween(5, 30);
         var linei = [Ni];
         for (var j = 0; j < Ni; j++) {
             linei.push(randBetween(0, 1000));
@@ -27,10 +27,10 @@ registerProblem('2014 Winter Programming School, Kharkiv, day 1 (E. Kapun). Juni
                 1 2',
         output: '9.0'
     }
-    //, {
-    //    input: genTest2014WPFKharkivH_3(),
-    //    output: ''
-    //}
+    , {
+        input: genTest2014WPFKharkivH_3(),
+        output: ''
+    }
     ],
 
     function () {

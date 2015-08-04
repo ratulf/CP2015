@@ -1,0 +1,39 @@
+select {
+    min-width: 200px;
+}
+
+table {
+    width: 100%;
+    /*border: solid 1px #808080;*/
+}
+
+    table thead {
+        background-color: #0094ff;
+    }
+
+        table thead th {
+            text-align: center;
+            vertical-align: middle;
+            border-right: solid 1px #808080;
+            border-bottom: solid 1px #808080;
+            border-top: solid 1px #808080;
+        }
+
+            table thead th:first-child {
+                width: 30px;
+                border-left: solid 1px #808080;
+            }
+
+    table tbody td {
+        text-align: left;
+        vertical-align: top;
+        border-right: solid 1px #808080;
+        border-bottom: solid 1px #808080;
+        width: 400px;
+    }
+
+        table tbody td:first-child {
+            text-align: center;
+            border-left: solid 1px #808080;
+            width: 30px;
+        }
